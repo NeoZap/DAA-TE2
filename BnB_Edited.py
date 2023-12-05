@@ -219,6 +219,7 @@ def BnB(G, T):
 
         end_time = time.time()
         delta_time = end_time - start_time
+        print(delta_time)
         if delta_time > T:
             print("Cutoff time reached")
 
@@ -308,7 +309,7 @@ def main(inputfile, output_dir, cutoff, randSeed):
     ) as f:
         for metric in metrics:
             f.write(
-                "%.2f seconds, %.2f bytes, %i\n" % (metric[1], metric[2], metric[0])
+                "%.3f seconds, %.2f bytes, %i\n" % (metric[1], metric[2], metric[0])
             )
 
 
